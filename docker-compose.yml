@@ -1,0 +1,10 @@
+version: '2'
+services:
+  db2:
+    image: registry.ng.bluemix.net/namespace_container/db2express:v1
+    ports:
+        - "50000:50000"   
+    environment:
+        - DB2INST1_PASSWORD=-pwd
+        - LICENSE=accept
+    command: db2start
